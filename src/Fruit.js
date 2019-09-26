@@ -5,6 +5,9 @@ class FruitForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {value: 'cherries'} //sets state to Cherries, so that is default fruit selected
+  
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
@@ -18,7 +21,7 @@ class FruitForm extends React.Component {
 
   render() {
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <label>
           Pick your favourite fruit:
           <select value={this.state.value} onChange={this.handleChange}>
