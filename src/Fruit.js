@@ -22,6 +22,7 @@ class FruitForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
+        <div className="label">
         <label>
           Pick your favourite fruit:
           <select value={this.state.value} onChange={this.handleChange}>
@@ -33,6 +34,7 @@ class FruitForm extends React.Component {
           </select>
         </label>
         <input type="submit" value="Submit" />
+        </div>
       </form>
     );
   }
